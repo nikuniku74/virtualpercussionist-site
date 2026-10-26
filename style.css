@@ -1,12 +1,6 @@
-/* The app's faces, in the app's order of preference (Source/UI/MainComponentShared.h:
-   Futura Condensed Medium, Avenir Next Condensed, DIN Condensed, Arial Narrow; Futura
-   Bold for the BPM). They are system fonts on Apple devices; elsewhere the stack
-   falls through to a narrow or heavy sans. */
-@font-face { font-family:"VPCond"; font-weight:400 700;
-  src: local("Futura Condensed Medium"), local("Futura-CondensedMedium"), local("Avenir Next Condensed Medium"),
-       local("AvenirNextCondensed-Medium"), local("DIN Condensed"), local("DINCondensed-Bold"), local("Arial Narrow"), local("ArialNarrow"); }
+/* Avenir Next matches the current app UI; Futura remains the display face. */
 :root {
-  --font-ui:"VPCond","Futura","Avenir Next Condensed","DIN Condensed","Arial Narrow",system-ui,-apple-system,sans-serif;
+  --font-ui:"Avenir Next","Avenir",system-ui,-apple-system,sans-serif;
   --font-display:"Futura","Futura-Bold","Avenir Next","Century Gothic",system-ui,-apple-system,sans-serif;
   --bg:#0f0e12; --bg2:#14131a; --panel:#18171f; --line:#2a2933; --text:#f4f4f7; --mute:#a2a1b0;
   --brand:#ff2ec8; --brand-dim:#a3197f; --violet:#9b6bff; --green:#34d17a;
@@ -73,6 +67,7 @@ h1 em { font-style:normal; background:linear-gradient(90deg,var(--brand),var(--v
 .store { margin:22px 0 0; text-align:center; }
 .store a { display:inline-block; line-height:0; }
 .store img { height:54px; width:auto; }
+.store .coming-soon { display:inline-block; padding:9px 22px; border:1px solid var(--line); border-radius:999px; color:var(--mute); font-weight:700; }
 .chips { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:22px 0 0; padding:0; list-style:none; }
 .chips li { padding:6px 16px; border:1px solid var(--line); border-radius:999px; color:var(--mute); font-size:16px; background:rgba(255,255,255,.02); }
 
